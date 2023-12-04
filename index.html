@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project</title>
+        <style>
+            body {
+                background: #0A6EBD;
+            }
+
+            h1 {
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 500px;
+                background-color: #A1C2F1;
+                padding: 15px;
+                border-radius: 10px;
+                margin: 20px auto;
+                border: 2px solid white;
+            }
+
+            img {
+                max-width: 100%;
+
+            }
+
+            button {
+                display: block;
+                margin: 0 auto;
+                border: 2px solid white;
+                background: black;
+                font-size: 10px;
+                border-radius: 10px;
+                padding: 10px 15px;
+                transition: all 150ms ease-in-out;
+                font-weight: bold;
+                color: white;
+            }
+
+            button:hover {
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+
+            }
+
+            footer {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 18px;
+                color: white;
+            }
+
+            .image-1:hover {
+                filter: contrast(80%);
+                transform: scale(1.1);
+            }
+
+            .image-1 {
+                transition: transform 150ms ease-in-out;
+            }
+
+
+            .grid {
+                margin: 15px 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+            .grid img {
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 150ms ease-in-out;
+            }
+
+            .grid img:hover {
+                transform: scale(2);
+                filter: contrast(80%);
+            }
+
+            .dark {
+                background: black;
+                color: white;
+            }
+
+            .dark .container {
+                background-color: #213363;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="theme-button"> Change Theme </button>
+        <div class="container">
+            <h1> Travel ✈ </h1>
+
+            <h2> My favorite hobby </h2>
+
+            <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+                <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="image-1" />
+            </a>
+            <div class="grid">
+                <img src="https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="image-2" />
+
+                <img src="https://images.pexels.com/photos/872831/pexels-photo-872831.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="image-3" />
+
+                <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="image-4" />
+
+                <img src="https://images.pexels.com/photos/15031960/pexels-photo-15031960/free-photo-of-mare-alba-spiaggia-vacanza.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="image-5" />
+            </div>
+            <p>
+                Travel exposes us to different cultures and ancient traditions and through these authentic
+                encounters, we learn to embrace and celebrate both </br>
+                our similarities and our differences. </br>
+                Travel teaches us about humanity and gives us an appreciation, </br>
+                understanding and respect for different points of view and ways of life.
+            </p>
+            <a href="https://www.instagram.com/_lalalalalaura/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank">
+                <button>Follow my travels</button> </a>
+        </div>
+        <footer>
+            Coded by <a href=" https://www.shecodes.io/graduates/75835-laura-loriga" target="_blank"> Laura🌺 </a>
+        </footer>
+        <script>
+            function changeTheme() {
+                let body = document.querySelector("body");
+                if (body.classList.contains("dark")) {
+                    body.classList.remove("dark");
+                } else {
+                    body.classList.add("dark");
+                }
+            }
+
+
+
+            let themebutton = document.querySelector(".theme-button");
+            themebutton.addEventListener("click", changeTheme);
+        </script>
+    </body>
+
+</html>
